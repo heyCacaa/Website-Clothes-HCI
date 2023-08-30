@@ -1,0 +1,618 @@
+*{
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#header .brand{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-left: 80px;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #191A1D;
+    padding: 17px 80px;
+    text-align: center;
+    box-shadow: 0 3px 13px rgb(100, 99, 99);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu li {
+    list-style: none;
+    cursor: pointer;
+    padding: 0 20px;
+    position: relative;
+}
+
+#menu li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    transition: 0.3s ease;
+}
+
+#menu li a:hover{
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#menu li a.active::after,
+#menu li a:hover::after {
+    content: "";
+    width: 34%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    bottom: -7px;
+    left: 20px;
+}
+
+#mobile{
+    display: none;
+    align-items: center;
+
+}
+
+#tutup {
+    display: none;
+}
+
+@media (max-width: 1200px){
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #000000;
+        box-shadow: 0 40px 60px rgba(238, 230, 230, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+    #menu li {
+        margin-bottom: 20px;
+    }
+    #menu.active{
+        right: 0px;
+    }
+    
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    
+    #mobile i{
+        color: white;
+        font-size: 22px;
+        padding-left: 22px;
+    }
+
+    #tutup {
+        display: initial;
+        position: absolute;
+        top: 32px;
+        left: 32px;
+        color: white;
+        font-size: 25px;
+    }
+
+    #bag {
+        display: none;
+    }
+}
+
+#quotes {
+    background-image: url("img/posterhome5.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% left 100% bottom 25%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px 80px;
+}
+
+#quotes h1{
+    font-size: 50px;
+    padding-bottom: 13px;
+    color: #000000a9;
+}
+
+#quotes h3{
+    font-size: 60px;
+    padding-bottom: 18px;
+}
+
+#quotes button{
+    background-color: black;
+    color: white;
+    border: 0;
+    font-size: 50px;
+    font-weight: 600;
+    padding: 15px 63px 15px 60px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+#videohome {
+    position: relative;
+    margin-top: 40px;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#videohome video {
+    z-index: -1;
+    position: absolute;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 477px){
+    #header {
+        padding: 10px 30px;
+    }
+    #quotes h1 {
+        font-size: 30px;
+    }
+
+    #quotes h2 {
+        font-size: 30px;
+    }
+    #quotes {
+        padding:0 20px;
+        background-position: 55%;
+    }
+}
+
+.bestsell {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: black;
+    padding: 0;
+    margin-top: 80px;
+    line-height: 1;
+    display: block;
+    text-align: center;
+}
+
+.row-scroll {
+    padding: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: space-around;
+}
+
+.row-scroll img {
+    width: 100%;
+    height: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 21%;
+    min-width: 350px;
+    padding: 10px 14px;
+    cursor: pointer;
+    margin: 20px 5px;
+    transition: 0.5s ease;
+}
+
+.card:hover {
+    width: 24%;
+}
+
+.card img {
+    width: 100%;
+}
+
+.container {
+    max-width: 100%;
+    margin: auto;
+}
+
+.prod-name {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 112.50%;
+}
+
+.price {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 100%;
+}
+
+.view-more {
+    padding-top: 2%;
+    padding-left: 90%;
+    font-size: 15px;
+    padding-bottom: 7%;
+}
+
+.view-more a {
+    color: #000000;
+}
+
+.mb:last-child {
+    margin-bottom: 0;
+}
+
+.mb {
+    margin-bottom: 30px;
+}
+
+.is-uppercase, .uppercase {
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.uppercase, h6, th, span.widget-title {
+    line-height: 1.05;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+h1.entry-title.mb {
+    padding-top: 4%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    margin-left: 15%;
+    margin-right: 30px;
+}
+
+h1.bottom-title.mb {
+    padding-top: 1%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    margin-left: 15%;
+    margin-right: 30px;
+}
+
+.mb-half:last-child, .mb:last-child {
+    margin-bottom: 0;
+}
+.mb {
+    margin-bottom: 30px;
+}
+.is-uppercase, .uppercase {
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+.uppercase, h6, th, span.widget-title {
+    line-height: 1.05;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.h1 {
+    color: #0a0a0a;
+    font-weight: 500;
+    width: 100%;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    display: block;
+}
+
+.isiabout {
+    font-size: 22px;
+    margin: 0 15% 15% 15%;
+    padding-right: 20%;
+    line-height: 2rem;
+    width: 80%;
+    text-align: justify;
+}
+
+@media (max-width: 549px){
+    .bestsell {
+        font-size: 20px;
+    }
+    .card {
+        min-width: 200px;
+    }
+    .h1 {
+        font-size: 1.4em;
+    }
+}
+
+#store .loc {
+    margin-top: 60px;
+    text-align: center;
+    font-weight: 700;
+}
+
+#store .loc .fotostore {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#store .loc .detail-loc {
+    font-weight: 400;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.subs {
+    text-align: center;
+    padding-top: 2em;
+}
+
+.isisub {
+    text-align: center;
+}
+
+.garissub {
+    height: 2px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 14px;
+    background-color: rgb(127, 133, 133);
+    color: #471c1c;
+    text-align: center;
+    width: 40%;
+}
+
+#subwrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+form {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin: 15px 0;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus{
+    border-bottom: 1px solid rgb(53, 53, 53);
+}
+
+.center{
+    text-align: center;
+}
+
+#submit{
+    margin-top: 30px;
+    width: 90%;
+    max-width: 1000px;
+    background: black;
+    color: white;
+    font-size: 18px;
+    padding: 8px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.check{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}
+
+.error-border{
+    border-bottom: 1px solid red;
+}
+
+select {
+    font-size: 15px;
+    padding: 8px 10px;
+    border: 1px solid #d5dbd9;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.subwrappers {
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    margin: 20px auto;
+    padding: 30px;
+}
+
+.subwrappers .form {
+    width: 100%;
+}
+
+.subwrappers .form .submit {
+    width: 100%;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 82px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+[type="checkbox"]{
+    margin: 20px 10px 0 10px;
+    width: 4%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.content-footer {
+    max-width: 1170px;
+    background-color:#191A1D; ;
+    margin: auto;
+}
+
+.judul-footer ul{
+    list-style: none;
+}
+
+.footerinfo{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer{
+    background-color: #191A1D;
+    padding: 60px 0;
+    margin-top: 80px;
+    text-align: center;
+    justify-content: center;
+}
+
+.judul-footer{
+    list-style: none;
+    width: 25%;
+    padding: 0 15px;
+}
+
+.judul-footer h4{
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+}
+
+.judul-footer ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.judul-footer ul li a{
+    font: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    display: block;
+    transition: all 0.3 ease;
+}
+
+.judul-footer ul li a:hover{
+    color: rgb(165, 163, 163);
+}
+
+.footer .brand{
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .social{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer .social a{
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 9px;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.footer .social a:hover{
+    opacity: 0.7;
+}
+
+.footer .copyright {
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
+
+@media(max-width : 800px){
+    .judul-footer{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width : 574px){
+    .judul-footer{
+        width: 100%;
+    }
+}
